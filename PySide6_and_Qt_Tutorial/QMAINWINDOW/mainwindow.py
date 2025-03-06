@@ -59,9 +59,11 @@ class MainWindow(QMainWindow): #create a class(MainWindow) that inherits from QM
         #action2.setCheckable(True) #set the action to be checkable
         toolbar.addAction(action2) # add the action to the toolbar
 
+        toolbar.addSeparator() # add a separator to the toolbar
+        toolbar.addWidget(QPushButton("Click here")) # add a button to the toolbar
+        toolbar.addWidget(QPushButton("Click here2"))
         toolbar.addSeparator()
-        toolbar.addWidget(QPushButton("Click here"))
-
+        
         # Working with status bar
         self.setStatusBar(QStatusBar(self)) #create a status bar and set it to the main window
 
