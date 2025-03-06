@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication
-from mainwindow import MainWindow
-import sys
+from mainwindow import MainWindow #import the MainWindow class from the mainwindow module
+import sys #import the sys module
 
 app = QApplication(sys.argv) #create the application
 
