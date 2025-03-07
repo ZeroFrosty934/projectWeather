@@ -50,20 +50,54 @@ class Widget(QWidget): # Create a class that inherits from QWidget
         if ret == QMessageBox.Ok : # Check the return value
             print("Ok")
         else:
-            print
-        ("Cancel")
-
+            print("Cancel")
+        
+    # Critical message box with save, discard, and cancel buttons 
     def button_clicked_critical(self):
-        print("Critical, This is a critical message")
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Critical)
+        msgBox.setText("This is a critical message")
+        msgBox.setWindowTitle("Critical")
+        msgBox.setStandardButtons(QMessageBox.Save | QMessageBox.Discard | QMessageBox.Cancel)
+        msgBox.setDefaultButton(QMessageBox.Save)
+        ret = msgBox.exec()
+        if ret == QMessageBox.Save:
+            print("Save")
+        elif ret == QMessageBox.Discard:
+            print("Discard")
+        else:
+            print("Cancel")
 
+    # Question message box
     def button_clicked_question(self):
-        print("Question, This is a question message")
-    
+        ret = QMessageBox.question(self, "Question", 
+            "This is a question message", 
+            QMessageBox.Yes | QMessageBox.No)
+        if ret == QMessageBox.Yes:
+            print("Yes")
+        else:
+            print("No")
+        
+    # Information message box
     def button_clicked_information(self):
-        print("Information, This is an information message")
+        ret = QMessageBox.information(self, "Information", "This is an information message", QMessageBox.Ok)
+        if ret == QMessageBox.Ok:
+            print("Ok")
+        else:
+            print("Cancel")
     
+    # Warning message box
     def button_clicked_warning(self):
-        print("Warning, This is a warning message")
+        ret = QMessageBox.warning(self, "Warning", "This is a warning message", QMessageBox.Ok)
+        if ret == QMessageBox.Ok:
+            print("Ok")
+        else:
+            print("Cancel")
     
+    # About message box
     def button_clicked_about(self):
-        print("About, This is an about message")
+        ret = QMessageBox.about(self, "About", "This is an about message")
+        if ret == QMessageBox.Ok:
+            print("Ok")
+        else:
+            print("Cancel")
