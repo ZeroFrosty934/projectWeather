@@ -87,12 +87,21 @@ class Widget(QWidget): # Create a class that inherits from QWidget
             print("Cancel")
     
     # Warning message box
-    def button_clicked_warning(self):
-        ret = QMessageBox.warning(self, "Warning", "This is a warning message", QMessageBox.Ok)
-        if ret == QMessageBox.Ok:
-            print("Ok")
+    def button_clicked_warning(self, s):
+        ret = QMessageBox.warning(
+            self, 
+            "Warning", 
+            "This is a warning message", 
+            buttons=QMessageBox.Discard | QMessageBox.NoToAll | QMessageBox.Ignore,
+            defaultButton=QMessageBox.Discard,
+            )
+        
+        if ret == QMessageBox.Discard:
+            print("Discard")
+        elif ret == QMessageBox.NoToAll:
+            print("NoToAll")
         else:
-            print("Cancel")
+            print("Ignore")
     
     # About message box
     def button_clicked_about(self):
