@@ -68,7 +68,7 @@ class Widget(QWidget): # Create a class that inherits from QWidget
         else:
             print("Cancel")
 
-    # Question message box
+    # Question message box 
     def button_clicked_question(self):
         ret = QMessageBox.question(self, "Question", 
             "This is a question message", 
