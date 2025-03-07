@@ -96,7 +96,14 @@ class Widget(QWidget): # Create a class that inherits from QWidget
     
     # About message box
     def button_clicked_about(self):
-        ret = QMessageBox.about(self, "About", "This is an about message")
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Information)
+        msgBox.setText("This is an about message")
+        msgBox.setWindowTitle("About")
+        msgBox.setStandardButtons(QMessageBox.Ok)
+        msgBox.setDefaultButton(QMessageBox.Ok)
+
+        ret = msgBox.exec()
         if ret == QMessageBox.Ok:
             print("Ok")
         else:
