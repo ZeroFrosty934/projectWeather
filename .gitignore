@@ -1,0 +1,7 @@
+# Ignore system files
+.DS_Store
+app.py
+button_holder.py
+main.py
+rockwidget.py
+Tips_and_Tricks.todo
