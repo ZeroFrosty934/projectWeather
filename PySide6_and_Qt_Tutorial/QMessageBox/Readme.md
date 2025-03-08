@@ -1,6 +1,6 @@
 # QMessageBox
 
-* In this tutorial, i learned how to show a message box in PySide6 using QMessageBox class. I have created a simple example where i have added buttons in the main window with the help of QVBoxLayout and added functionality to the buttons. When the button is clicked, a message box will be shown with different types of message boxes like Information, Warning, Critical, Question and About. 
+* In this project, i learned how to show a message box in PySide6 using QMessageBox class. I have created a simple example where i have added buttons in the main window with the help of QVBoxLayout and added functionality to the buttons. When the button is clicked, a message box will be shown with different types of message boxes like Information, Warning, Critical, Question and About. 
 
 Packages used:
 * PySide6

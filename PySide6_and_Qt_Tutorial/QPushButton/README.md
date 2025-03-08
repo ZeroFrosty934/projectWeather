@@ -1,6 +1,6 @@
 # QPushButton
 
-In this tutorial, we will learn the clicked, pressed and released signal of QPushButton. So when we click, press or release the button, the corresponding signal will be written to the console.
+In this project, i learned how to use QPushButton in PySide6. I have created a simple example where i have added a clicked, pressed and released signal. When the button is clicked, pressed or released, a message will be shown in the console.
 
 What i learned from this example:
 * How to use clicked, pressed and released signal of QPushButton
