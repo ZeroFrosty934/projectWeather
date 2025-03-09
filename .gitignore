@@ -1,4 +1,4 @@
-# Ignore system files
+# Ignore files
 .DS_Store
 app.py
 button_holder.py
