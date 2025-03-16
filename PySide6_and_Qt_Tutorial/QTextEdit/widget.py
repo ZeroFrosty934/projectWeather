@@ -65,7 +65,7 @@ class Widget(QWidget):
         self.text_edit.paste()
 
     def set_plain_text(self):
-        self.text_edit.setPlainText("This is plain text")
+        self.text_edit.setPlainText("This is plain text") # Set plain text to the QTextEdit.
     
     def set_html(self):
-        self.text_edit.setHtml("<h1>This is HTML</h1><p> This is a paragraph </p> <ol> <li> Item 1 </li> <li> Item 2 </li> <li> Item 3 </li> </ol>")
+        self.text_edit.setHtml("<h1>This is HTML</h1><p> This is a paragraph </p> <ol> <li> Item 1 </li> <li> Item 2 </li> <li> Item 3 </li> </ol>") # Set HTML content to the QTextEdit.
