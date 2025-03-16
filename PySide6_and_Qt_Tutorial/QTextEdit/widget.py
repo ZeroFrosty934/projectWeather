@@ -22,7 +22,7 @@ class Widget(QWidget):
         cut_button.clicked.connect(self.text_edit.cut)
 
         paste_button = QPushButton("Paste")
-        paste_button.clicked.connect(self.text_edit.paste) # got through a custom slot
+        paste_button.clicked.connect(self.paste) # got through a custom slot
 
         undo_button = QPushButton("Undo")
         undo_button.clicked.connect(self.text_edit.undo)
@@ -61,3 +61,5 @@ class Widget(QWidget):
     def current_text_button_clicked(self):
         print(self.text_edit.toPlainText()) # Print the current text in terminal when the button is clicked. 
 
+    def paste(self):
+        self.text_edit.paste()
