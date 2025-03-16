@@ -31,10 +31,10 @@ class Widget(QWidget):
         redo_button.clicked.connect(self.text_edit.redo)
 
         set_plain_text_button = QPushButton("Set Plain Text")
-        #set_plain_text_button.clicked.connect(self.set_plain_text)
+        set_plain_text_button.clicked.connect(self.set_plain_text)
 
         set_html_button = QPushButton("Set HTML")
-        #set_html_button.clicked.connect(self.set_html)
+        set_html_button.clicked.connect(self.set_html)
 
         clear_button = QPushButton("Clear")
         #clear_button = clear_button.clicked.connect(self.text_edit.clear)
@@ -63,3 +63,9 @@ class Widget(QWidget):
 
     def paste(self):
         self.text_edit.paste()
+
+    def set_plain_text(self):
+        self.text_edit.setPlainText("This is plain text")
+    
+    def set_html(self):
+        self.text_edit.setHtml("<h1>This is HTML</h1><p> This is a paragraph </p> <ol> <li> Item 1 </li> <li> Item 2 </li> <li> Item 3 </li> </ol>")
