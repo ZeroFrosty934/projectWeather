@@ -37,7 +37,7 @@ class Widget(QWidget):
         set_html_button.clicked.connect(self.set_html)
 
         clear_button = QPushButton("Clear")
-        #clear_button = clear_button.clicked.connect(self.text_edit.clear)
+        clear_button.clicked.connect(self.text_edit.clear)
 
         # Create horizontal layout for the buttons.
         h_layout = QHBoxLayout()
