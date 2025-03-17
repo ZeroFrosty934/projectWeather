@@ -1,6 +1,6 @@
 # QTextEdit
 
-In this project i learned how QTextEdit works in PySide6. I have created a simple example where i have added a textChanged signal. When the text is changed in the QTextEdit, a message will be shown in the console. I also added buttons like copy, cut, paste, undo and redo. 
+In this project i learned how QTextEdit works in PySide6. I created a simple text editor with a QTextEdit widget. I connected the textChanged signal of QTextEdit to a slot that prints the text in the QTextEdit widget. I can also copy, cut, paste, undo and redo the text in the QTextEdit widget. Display Html and Plain text in QTextEdit widget.
 
 What i learned from this example: 
 * How to use textChanged signal of QTextEdit
