@@ -10,4 +10,7 @@ class Widget(QWidget):
         image_label = QLabel()
         image_label.setPixmap(QPixmap("images/Cat_Riding_horse.jpg"))
 
-        
+        layout = QVBoxLayout()
+        layout.addWidget(image_label)
+
+        self.setLayout(layout)    
