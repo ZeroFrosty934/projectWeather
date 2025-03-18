@@ -5,3 +5,9 @@ class Widget(QWidget):
     def __init__(self):
         super().__init__()
         
+        self.setWindowTitle("QLabel Images")
+
+        image_label = QLabel()
+        image_label.setPixmap(QPixmap("images/Cat_Riding_horse.jpg"))
+
+        
