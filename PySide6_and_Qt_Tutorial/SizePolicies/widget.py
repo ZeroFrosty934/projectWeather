@@ -11,4 +11,7 @@ class Widget(QWidget):
         label = QLabel("Some text : ")
         label_edit = QLineEdit()
 
+        h_layout = QHBoxLayout()
+        h_layout1.addWidget(label)
+        h_layout1.addWidget(label_edit)
         
