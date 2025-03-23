@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QCheckBox, QHBoxLayout, QVBoxLayout, QGroupBox, QRadioButton
+from PySide6.QtWidgets import QWidget, QCheckBox, QHBoxLayout, QVBoxLayout, QGroupBox, QRadioButton, QButtonGroup
 
 
 class Widget(QWidget):
@@ -26,11 +26,33 @@ class Widget(QWidget):
         os_layout.addWidget(mac)
         os.setLayout(os_layout)
 
-        layout = QVBoxLayout()
+        # Exclusive checkboxes : Drinks
+        drinks = QGroupBox("Choose Your Drink") 
+
+        beer = QCheckBox("Beer")
+        juice = QCheckBox("Juice")
+        coffee = QCheckBox("Coffee")
+        beer.setChecked(True)
+
+        #Make the checkboxes exclusive by adding them to a QButtonGroup
+        exclusive_button_group = QButtonGroup(self) # Create a QButtonGroup and set it as a self parent
+        exclusive_button_group.addButton(beer)
+        exclusive_button_group.addButton(juice)
+        exclusive_button_group.addButton(coffee)
+        exclusive_button_group.setExclusive
+
+        drinks_layout = QVBoxLayout() # Create a vertical layout for the drinks group
+        drinks_layout.addWidget(juice)
+        drinks_layout.addWidget(coffee)
+        drinks.setLayout(drinks_layout)
+
+        # Create a horizontal layout and add the two groups
+        layout = QHBoxLayout()
         layout.addWidget(os)
+        layout.addWidget(drinks)
 
-        self.setLayout(layout)
-
+        self.setLayout(layout) 
+        
     # Slot functions for checkboxes
     def windows_box_toggled(self, checked):
         if(checked):
