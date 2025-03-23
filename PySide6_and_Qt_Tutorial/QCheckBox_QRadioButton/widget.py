@@ -42,10 +42,10 @@ class Widget(QWidget):
         exclusive_button_group.setExclusive
 
         drinks_layout = QVBoxLayout() # Create a vertical layout for the drinks group
+        drinks_layout.addWidget(beer)
         drinks_layout.addWidget(juice)
         drinks_layout.addWidget(coffee)
         drinks.setLayout(drinks_layout)
-
 
         # Radio buttons : answers
         answers = QGroupBox("Choose Answer")
@@ -60,13 +60,16 @@ class Widget(QWidget):
         answers_layout.addWidget(answers_c)
         answers.setLayout(answers_layout)
 
-        # Create a horizontal layout and add the two groups
-        layout = QHBoxLayout()
-        layout.addWidget(os)
-        layout.addWidget(drinks)
-        layout.addWidget(answers)
+        # Create a horizontal and vertical layout to add the groups
+        h_layout = QHBoxLayout()
+        h_layout.addWidget(os)
+        h_layout.addWidget(drinks)
 
-        self.setLayout(layout) 
+        v_layout = QVBoxLayout()
+        v_layout.addLayout(h_layout)
+        v_layout.addWidget(answers)
+
+        self.setLayout(v_layout) 
 
     # Slot functions for checkboxes
     def windows_box_toggled(self, checked):
