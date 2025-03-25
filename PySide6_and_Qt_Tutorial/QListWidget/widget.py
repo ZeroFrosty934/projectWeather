@@ -3,8 +3,10 @@ from PySide6.QtWidgets import QWidget, QCheckBox, QHBoxLayout, QVBoxLayout, QLis
 class Widget(QWidget):
     def __init__(self):
         super().__init__()
-        
 
         self.setWindowTitle("QListWidget Demo")
 
-    
+        self.list_widget = QListWidget(self)
+        self.list_widget.setSelectionMode(QAbstractButton.MultiSelection)
+        self.list_widget.addItems("One")
+        self.list_widget.addItems(["Two", "Three"])
