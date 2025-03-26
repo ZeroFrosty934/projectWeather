@@ -39,8 +39,25 @@ class Widget(QWidget):
 
         self.setLayout(v_layout)
 
+
     def current_item_changed(self, items): # This definition is called when the current item is changed.
         print("Current item changed: ", items.text())
 
     def current_text_changed(self, text): # This definition is called when the current text is changed. 
         print("Current text changed: ", text)
+    
+
+    def add_item(self):
+        input_text = input("Enter new item: ")
+        self.list_widget.addItem(input_text) # Add a new item to the list.
+
+    def item_count(self):
+        print("Item Count: ", self.list_widget.count()) # Count the number of items in the list.
+
+    def delete_item(self):
+        self.list_widget.takeItem(self.list_widget.currentRow()) # Delete the current item from the list.
+
+    def selected_items(self):
+        list = self.list_widget.selectedItems() # Get the selected items from the list and print them in a loop.
+        for i in list:
+            print(i.text())
