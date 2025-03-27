@@ -9,13 +9,19 @@ class Widget(QWidget):
         tab_widget = QTabWidget(self)
 
 
-        widget_form = QWidget() # Create a widget
+        widget_form = QWidget(self) # Create a widget
         label_full_name = QLabel("Full Name :")
-        line_edit_full_name = QLineEdit()
+        self.line_edit_full_name = QLineEdit()
+        button_ok = QPushButton("OK")
+        button_ok.clicked.connect(self.on_button_clicked)
+
+        buttons_layout_ok = QVBoxLayout()
+        buttons_layout_ok.addWidget(button_ok)
 
         form_layout = QHBoxLayout() # Create a horizontal layout
         form_layout.addWidget(label_full_name) 
-        form_layout.addWidget(line_edit_full_name)
+        form_layout.addWidget(self.line_edit_full_name)
+        form_layout.addLayout(buttons_layout_ok)
 
         widget_form.setLayout(form_layout) # Set layout to widget
 
@@ -46,3 +52,7 @@ class Widget(QWidget):
 
     def on_button_clicked(self):
         print("Button one clicked")
+
+    def on_button_clicked(self):
+        user_input = self.line_edit_full_name.text()
+        print(f"Button clicked! Input: {user_input}")
