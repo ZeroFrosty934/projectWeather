@@ -24,3 +24,23 @@ class Widget(QWidget):
 
         button_get_value = QPushButton("Get Value")
         button_get_value.clicked.connect(self.get_value)
+
+
+        # Create a layout
+        v_layout = QVBoxLayout()
+        v_layout.addWidget(self.combo_box)
+        v_layout.addWidget(button_current_value)
+        v_layout.addWidget(button_set_value)
+        v_layout.addWidget(button_get_value)
+
+        self.setLayout(v_layout)
+
+    
+    def get_current_value(self):
+        print(self.combo_box.currentText())
+
+    def set_value(self):
+        print("Set value")
+    
+    def get_value(self):
+        print("Get value")
