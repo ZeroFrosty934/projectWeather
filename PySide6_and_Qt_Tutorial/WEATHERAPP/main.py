@@ -1,14 +1,10 @@
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication
+from widget import Widget
 import sys
 
-class WeatherApp(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Weather App")
-        self.setGeometry(100, 100, 800, 600)  # Set window size
+app = QApplication(sys.argv)
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = WeatherApp()
-    window.show()
-    sys.exit(app.exec())
+window = Widget()
+window.show()
+
+app.exec()
