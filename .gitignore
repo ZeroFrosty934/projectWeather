@@ -1,8 +1,0 @@
-# Ignore files
-.DS_Store
-app.py
-button_holder.py
-main1.py
-rockwidget.py
-Tips_and_Tricks.todo
-__pycache__
