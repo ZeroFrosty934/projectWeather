@@ -2,15 +2,9 @@ from PySide6.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QPushButton, QLab
 from PySide6.QtCore import Qt
 import requests
 
-def get_api_key():
-    filepath = YOUR_API_KEY_FILE_PATH  # Replace with your actual file path
-    with open(filepath, "r") as file:
-        return file.read().strip()
-
-api_key = get_api_key()
 
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
-API_KEY = get_api_key()
+API_KEY = YOUR_API_KEY  # Replace with your OpenWeatherMap API key
 
 
 class Widget(QWidget):
