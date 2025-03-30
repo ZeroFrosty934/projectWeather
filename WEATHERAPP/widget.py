@@ -11,7 +11,7 @@ class Widget(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Weather App")
-        self.setGeometry(100, 100, 500, 200)  # Set window size
+        self.setGeometry(100, 100, 400, 200)  # Set window size
 
         # Layout and widgets
         self.layout = QVBoxLayout()
